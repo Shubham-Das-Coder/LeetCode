@@ -1,0 +1,14 @@
+/*
+Link of the question : https://leetcode.com/problems/replace-all-digits-with-characters/
+Leetcode question number : 1844
+*/
+class Solution
+{
+public:
+    string replaceDigits(string s)
+    {
+        for (auto i = 1; i < s.size(); i += 2)
+            s[i] += s[i - 1] - '0';
+        return s;
+    }
+};
